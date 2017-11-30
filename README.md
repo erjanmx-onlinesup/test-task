@@ -1,5 +1,7 @@
 # DireTube crawler
 
+### Usage
+
 ```
 python -m venv venv
 source venv/bin/activate
@@ -10,6 +12,8 @@ orator migrate -c test_task/config/db.py -f
 scrapy crawl diretube
 ```
 
+### Example of crawled data
+
 | title                                                                                | url                                                                                                                                                                                                                                     | video_url                                                                       | preview_url                                                 | categories                                                     | added_by                        | added_at                   | views                      |       |
 |--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------------------------|----------------------------------------------------------------|---------------------------------|----------------------------|----------------------------|-------|
 | 10 Hours of Walking in NYC as Kim Jong Un                                            | https://www.diretube.com/10-hours-of-walking-in-nyc-as-kim-jong-un_0fcd4912f.html                                                                                                                                                       | https://content.jwplatform.com/videos/qth3NfDW-ht5J3HgI.mp4                     | https://assets-jpcust.jwpsrv.com/thumbs/qth3NfDW-720.jpg    | Funny Videos                                                   | yostina                         | 2017-10-25 13:06:39.000000 | 12,176                     |       |
@@ -18,3 +22,8 @@ scrapy crawl diretube
 | This car crash prank is absolutely insane!                                           | https://www.diretube.com/this-car-crash-prank-is-absolutely-insane_4b9e2cece.html                                                                                                                                                       | https://content.jwplatform.com/videos/SPBc8ej1-ht5J3HgI.mp4                     | https://assets-jpcust.jwpsrv.com/thumbs/SPBc8ej1-720.jpg    | Amazing Videos, Funny Videos                                   | yostina                         | 2017-09-27 14:09:35.000000 | 5,837                      |       |
 | Top Very Funny Comedy from Comedian Esayas                                           | https://www.diretube.com/top-very-funny-comedy-from-comedian-esayas_301203056.html                                                                                                                                                      | https://content.jwplatform.com/videos/LAvax5yY-ht5J3HgI.mp4                     | https://assets-jpcust.jwpsrv.com/thumbs/LAvax5yY-720.jpg    | Ethiopian Comedy, Funny Videos                                 | bini                            | 2017-08-19 14:20:15.000000 | 10,817                     |       |
 | Adane Teka - Funny Musical Comedy - DON'T WORRY                                      | https://www.diretube.com/adane-teka-funny-musical-comedy-dont-worry_d2bcc16d8.html                                                                                                                                                      | https://content.jwplatform.com/videos/poU5Lqip-ht5J3HgI.mp4                     | https://assets-jpcust.jwpsrv.com/thumbs/poU5Lqip-720.jpg    | Ethiopian Comedy, Funny Videos                                 | bini                            | 2017-09-03 14:17:03.000000 | 6,595                      |       |
+
+
+### Task description
+
+> Спарсить полную информацию по видео на сайте:  https://www.diretube.com/browse-comedy-videos-1-date.html    Тайтл, ссылка на видео(для скачивания), когда добавлено, возможные категории и т.д. (проанализировать, коментарии к видео не нужны)  Дамп в формате csv, разделитель символ табуляции, первой строкой указать название столбца по которому можно идентифицировать содержимое.  Желательно как можно больше информации и по видео, в т.ч. скрин. Желательно наличие исходного кода при написании скрипта
